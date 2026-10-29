@@ -234,7 +234,7 @@ class NoNCrossRank:
 # =====================================================================
 #  MemGraphRAG
 # =====================================================================
-class MemGraphRAG:
+class MemGraphRAG_NON:
 
     def __init__(self, global_config=None, save_dir=None, llm_model_name=None, embedding_model_name=None, llm_base_url=None):
         """
@@ -264,7 +264,7 @@ class MemGraphRAG:
             self.global_config.llm_base_url = llm_base_url
 
         _print_config = ",\n  ".join([f"{k} = {v}" for k, v in asdict(self.global_config).items()])
-        logger.debug(f"MemGraphRAG init with config:\n  {_print_config}\n")
+        logger.debug(f"MemGraphRAG_NON init with config:\n  {_print_config}\n")
 
         # LLM and embedding specific working directories are created under the saving directory
         llm_label = self.global_config.llm_name.replace("/", "_")
