@@ -40,7 +40,7 @@ from src.ner import SpacyNER
 logger = logging.getLogger(__name__)
 
 
-class LinearRAG:
+class MedHeteRAG:
     def __init__(self, global_config):
         self.config = global_config
         self.dataset_name = global_config.dataset_name
